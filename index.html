@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeRoute</title>
+<meta name="description" content="DeRoute: vibe-code your next trip. Under construction.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232B50D8'/%3E%3Cpath d='M16 46 C26 46 24 18 34 18 S44 40 48 22' fill='none' stroke='%23fff' stroke-width='5' stroke-linecap='round' stroke-dasharray='1 9'/%3E%3Ccircle cx='16' cy='46' r='5' fill='%23fff'/%3E%3Ccircle cx='48' cy='20' r='5' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#FAFAF7; --ink:#14171F; --mute:#5F6672; --blue:#2B50D8; --line:#CFCAC0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0F1115; --ink:#F2F0EA; --mute:#9AA1AD; --blue:#6E8BFF; --line:#2A2E36; }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: 'DM Sans', system-ui, -apple-system, Arial, sans-serif;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 32px 16px; text-align: center;
+  }
+  .logo { display: flex; align-items: center; gap: 14px; margin-bottom: 56px; }
+  .logo svg { width: 48px; height: 48px; }
+  .logo span { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
+  .tag {
+    font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--blue); border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px;
+    margin-bottom: 28px;
+  }
+  h1 { font-size: clamp(36px, 7vw, 72px); line-height: 1.05; letter-spacing: -1.5px; margin: 0 0 20px; font-weight: 600; max-width: 900px; }
+  p { font-size: clamp(17px, 2.2vw, 22px); line-height: 1.5; color: var(--mute); margin: 0; max-width: 560px; }
+  footer { position: fixed; bottom: 24px; left: 0; right: 0; font-size: 14px; color: var(--mute); }
+  .route { stroke-dasharray: 2 10; animation: move 1.6s linear infinite; }
+  @keyframes move { to { stroke-dashoffset: -24; } }
+  @media (prefers-reduced-motion: reduce) { .route { animation: none; } }
+</style>
+</head>
+<body>
+  <div class="logo" aria-label="DeRoute">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <rect width="64" height="64" rx="14" fill="var(--blue)"/>
+      <path class="route" d="M16 46 C26 46 24 18 34 18 S44 40 48 22" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="16" cy="46" r="5" fill="#fff"/>
+      <circle cx="48" cy="20" r="5" fill="#fff"/>
+    </svg>
+    <span>DeRoute</span>
+  </div>
+  <div class="tag">Under construction</div>
+  <h1>Vibe-code your next trip.</h1>
+  <p>We're building the next generation of travel: tell it what you want, and it plans the whole route. Coming soon.</p>
+  <footer>© 2026 DeRoute</footer>
+</body>
+</html>
